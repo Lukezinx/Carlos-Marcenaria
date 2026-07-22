@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-animate {
+    animation: slideDown 0.2s ease-out forwards;
+}
+
+
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-90deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+.icon-animate-hamburgue {
+    animation: rotateIn 0.2s ease-out forwards;
+}
+
+
+/*  leaflet */
+
+.leaflet-default-icon-path {
+    background-image: url(https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png);
+}
+
+
+/* Fix z-index do Leaflet — navbar fica na frente */
+
+.leaflet-top,
+.leaflet-bottom {
+    z-index: 400 !important;
+}
