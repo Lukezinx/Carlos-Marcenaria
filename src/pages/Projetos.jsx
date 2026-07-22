@@ -22,17 +22,17 @@ export default function Projetos() {
 
             <p className="text-gray-400 text-center mb-10">Conheça nossos trabalhos</p>
 
-            <div className="flex flex-wrap gap-3 justify-center mb-10">
+            <div className="flex flex-wrap gap-3 justify-center mb-10 px-2">
 
                 {["todos", ...categorias].map((cat => (
                     <button 
                     key={cat} 
                     onClick={() => setFiltroAtivo(cat)}
-                    className={filtroAtivo === cat
-                        ? 'bg-[#C9A227] text-black font-bold px-6 py-2 rounded-full capitalize'
-                        : 'border border-[#C9A227] text-[#C9A227] px-6 py-2 rounded-full hover:bg-[#C9A227] hover:text-black transition capitalize'
-                    }
-                    >
+                    className={`whitespace-nowrap ${filtroAtivo === cat
+                        ? 'bg-[#C9A227] text-black font-bold px-4 py-2 rounded-full capitalize text-sm'
+                        : 'border border-[#C9A227] text-[#C9A227] px-4 py-2 rounded-full hover:bg-[#C9A227] hover:text-black transition capitalize text-sm'
+                    }`}>
+                        
                         {cat}
                     </button>
                 )))}
