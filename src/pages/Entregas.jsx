@@ -1,5 +1,20 @@
+import L from 'leaflet'
+import 'leaflet/dist/leaflet.css'
+import icon from 'leaflet/dist/images/marker-icon.png'
+import iconShadow from 'leaflet/dist/images/marker-shadow.png'
 import { MapContainer, TileLayer, Circle, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
+
+
+let DefaultIcon = L.icon({
+    iconUrl: icon,
+    shadowUrl: iconShadow,
+    iconSize: [25, 41],
+    iconAnchor: [12, 41]
+})
+
+L.Marker.mergeOptions({ icon: DefaultIcon })
+
 
 // Coordenadas de Belford Roxo
 const CENTRO = [-22.7644, -43.3994]

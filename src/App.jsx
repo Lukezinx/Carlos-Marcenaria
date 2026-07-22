@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation} from 'react-router-dom'
+import { useEffect } from 'react'
 import { FaWhatsapp } from 'react-icons/fa'
 import Home from './pages/Home'
 import Projetos from './pages/Projetos'
@@ -8,9 +9,19 @@ import Entregas from './pages/Entregas'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 
+
+function ScrollToTop() {
+    const { pathname } = useLocation()
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname])
+    return null
+}
+
 export default function App() {
     return (
         <BrowserRouter>
+        <ScrollToTop/>
             <NavBar />
             <Routes>
                 <Route path="/" element={<Home />} />

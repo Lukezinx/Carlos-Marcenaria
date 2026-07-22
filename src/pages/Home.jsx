@@ -51,8 +51,8 @@ export default function Home() {
                     <Link 
                         key={cat}
                         to={`/projetos?categoria=${cat}`}
-                        className="bg-[#2a2a2a] border border-[#C9A227]/20 rounded-xl p-8 text-center hover:border-[#C9A227] hover:scale-105 transition-all duration-200">
-                        <p className="text-xl font-bold text-white capitalize">{cat}</p>
+                        className="bg-[#2a2a2a] border border-[#C9A227]/20 rounded-xl p-4 md:p-8 text-center hover:border-[#C9A227] hover:scale-105 transition-all duration-200">
+                        <p className="text-lg md:text-xl font-bold text-white capitalize whitespace-nowrap">{cat}</p>
                     </Link>
                     ))}
                 </div>
