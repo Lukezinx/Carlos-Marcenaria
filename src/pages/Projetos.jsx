@@ -32,7 +32,7 @@ export default function Projetos() {
                         ? 'bg-[#C9A227] text-black font-bold px-4 py-2 rounded-full capitalize text-sm'
                         : 'border border-[#C9A227] text-[#C9A227] px-4 py-2 rounded-full hover:bg-[#C9A227] hover:text-black transition capitalize text-sm'
                     }`}>
-                        
+
                         {cat}
                     </button>
                 )))}
@@ -69,7 +69,7 @@ export default function Projetos() {
 
                         {projetoSelecionado.imagens.length > 1 && (
                             <>
-                                <button onClick={() => setFotoAtual(prev => prev === 0 ? projetoSelecionado.imagens.length : prev -1 )} className="cursor-pointer absolute left-2 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center">
+                                <button onClick={() => setFotoAtual(prev => prev === 0 ? projetoSelecionado.imagens.length -1 :  prev -1 )} className="cursor-pointer absolute left-2 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center">
                                     <MdChevronLeft size={28}/>
                                 </button>
 
