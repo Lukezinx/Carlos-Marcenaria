@@ -92,6 +92,8 @@ export default function NavBar() {
 
                     <NavLink to="/projetos" onClick={() => setMenuAberto(false)} className={({ isActive }) => isActive ? "text-[#C9A227] font-semibold border-b-2 border-[#C9A227] pb-1" : "text-gray-300 hover:text-[#C9A227] transition-colors duration-200"}>Projetos</NavLink>
 
+                    <NavLink to="/entregas" onClick={() => setMenuAberto(false)} className={({ isActive }) => isActive ? "text-[#C9A227] font-semibold border-b-2 border-[#C9A227] pb-1" : "text-gray-300 hover:text-[#C9A227] transition-colors duration-200"}>Projetos</NavLink>
+
                     <NavLink to="/sobre" onClick={() => setMenuAberto(false)} className={({ isActive }) => isActive ? "text-[#C9A227] font-semibold border-b-2 border-[#C9A227] pb-1" : "text-gray-300 hover:text-[#C9A227] transition-colors duration-200"}>Sobre</NavLink>
 
                     <NavLink to="/contato" onClick={() => setMenuAberto(false)} className={({ isActive }) => isActive ? "text-[#C9A227] font-semibold border-b-2 border-[#C9A227] pb-1" : "text-gray-300 hover:text-[#C9A227] transition-colors duration-200"}>Contato</NavLink>
